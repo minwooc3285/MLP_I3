@@ -1,0 +1,24 @@
+# experiment.yml
+name: MLP Optimization
+metrics:
+- name: mean_squared_error
+  strategy: optimize
+  objective: minimize
+parameters:
+- name: learning_rate_init
+  bounds:
+    min: 0.001
+    max: 0.01
+  type: double
+- name: max_iter
+  bounds:
+    min: 10
+    max: 100
+  type: int
+- name: num_nodes
+  bounds:
+    min: 10
+    max: 100
+  type: int
+budget: 50
+
